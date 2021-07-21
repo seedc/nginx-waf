@@ -115,6 +115,8 @@ cd ..
 tar -vxzf nginx-1.18.0.tar.gz
 cd nginx-1.18.0
 ./configure --user=nobody --group=nobody --with-http_realip_module --with-pcre --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-http_gzip_static_module --with-http_sub_module --add-module=/data/src/ngx_devel_kit-0.2.19 --add-module=/data/src/lua-nginx-module-0.10.14 --with-ld-opt=-Wl,-rpath,$LUAJIT_LIB
+make
+#如果是添加插件不要安装
 
 记得修改配置文件，他的配置路径和文档有点不一样
 </pre>
